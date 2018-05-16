@@ -1,4 +1,6 @@
 # prompt
 
-![screenshot](screenshot.png)
+<div align="center">
+  <img src="screenshot.png" alt="screenshot" />
+</div>
 
