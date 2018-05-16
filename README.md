@@ -1,3 +1,4 @@
 # prompt
-My prompt for zsh
+
+![screenshot](screenshot.png)
 
