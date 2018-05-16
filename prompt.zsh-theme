@@ -4,15 +4,12 @@ git-prompt() {
     local message=""
     local message_color="%F{green}"
 
-    local staged=$(git status --porcelain 2>/dev/null | grep "^M ")
-    local unstaged=$(git status --porcelain 2>/dev/null | grep "^ M")
-    local untracked=$(git status --porcelain 2>/dev/null | grep "^??")
+    local staged=$(git status --porcelain 2>/dev/null | grep -e "^M " -e "^A ")
+    local unstaged=$(git status --porcelain 2>/dev/null | grep -e "^ M" -e "^??")
 
     if [[ -n ${staged} ]]; then
         message_color="%F{yellow}"
     elif [[ -n ${unstaged} ]]; then
-        message_color="%F{red}"
-    elif [[ -n ${untracked} ]]; then
         message_color="%F{red}"
     fi
 
